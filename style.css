@@ -1,0 +1,119 @@
+body {
+    font-family: 'Georgia', serif;
+  
+    color: #4e342e;
+    margin: 0;
+    padding: 0;
+    background-image:url('Designer (3).jpeg');
+    height: 100vh;
+    /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: #fff3e0;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid #4e342e;
+    border-radius: 15px;
+    position: relative;
+    background-image: url('a-ancient--preview.png');
+    height: 80vh;
+    /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+        backdrop-filter: blur(1px);
+        margin-top: 10px;
+      
+   
+}
+
+.header {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d84315;
+}
+
+.setting-section {
+    margin-bottom: 20px;
+}
+
+.setting-section:hover .section-content {
+    display: block;
+}
+
+.setting-section h2 {
+    background-color: #8d6e63;
+    padding: 10px;
+    margin: 0;
+    font-size: 13px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.setting-section h2:hover {
+    background-color: #6d4c41;
+}
+
+.section-content {
+    display: none;
+    padding: 15px;
+    border-left: 5px solid #8d6e63;
+    background-color: #ffecb3;
+    border-radius: 0 5px 5px 5px;
+    transition: max-height 0.3s ease;
+}
+
+.section-content p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+.ancient-border {
+    border: 2px dashed #6d4c41;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fffde7;
+}
+
+.setting-option {
+    margin: 15px 0;
+}
+
+.setting-option label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.setting-option input[type="range"],
+.setting-option select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #8d6e63;
+    background-color: #fffde7;
+    color: #4e342e;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #8d6e63;
+}
+*{
+
+}

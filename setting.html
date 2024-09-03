@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Legends of India</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back">
+
+    <div class="container">
+        <div class="header">Game Settings</div>
+
+        <div class="setting-section">
+            <h2>Audio Settings</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <label for="audio-volume">Volume</label>
+                    <input type="range" id="audio-volume" name="audio-volume" min="0" max="100" value="70" oninput="document.getElementById('audio-volume-display').innerText = this.value + '%'">
+                    <p class="ancient-border" id="audio-volume-display">70%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-section">
+            <h2>Graphics Settings</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <label for="graphics-quality">Quality</label>
+                    <select id="graphics-quality" name="graphics-quality" onchange="document.getElementById('graphics-quality-display').innerText = this.value">
+                        <option value="Low">Low</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="High">High</option>
+                        <option value="Ultra">Ultra</option>
+                    </select>
+                    <p class="ancient-border" id="graphics-quality-display">Medium</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-section">
+            <h2>Language Settings</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <label for="language-select">Language</label>
+                    <select id="language-select" name="language-select" onchange="document.getElementById('language-display').innerText = this.value">
+                        <option value="English" selected>English</option>
+                    </select>
+                    <p class="ancient-border" id="language-display">English</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-section">
+            <h2>Gameplay Settings</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <label for="difficulty-select">Difficulty</label>
+                    <select id="difficulty-select" name="difficulty-select" onchange="document.getElementById('difficulty-display').innerText = this.value">
+                        <option value="Easy">Easy</option>
+                        <option value="Normal" selected>Normal</option>
+                        <option value="Hard">Hard</option>
+                        <option value="Insane">Insane</option>
+                    </select>
+                    <p class="ancient-border" id="difficulty-display">Normal</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-section">
+            <h2>Accessibility Options</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <label for="accessibility-select">Accessibility Features</label>
+                    <select id="accessibility-select" name="accessibility-select" onchange="document.getElementById('accessibility-display').innerText = this.value">
+                        <option value="None" selected>None</option>
+                        <option value="Colorblind Mode">Colorblind Mode</option>
+                        <option value="Subtitles">Subtitles</option>
+                        <option value="High Contrast">High Contrast</option>
+                    </select>
+                    <p class="ancient-border" id="accessibility-display">None</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-section">
+            <h2>Save/Load Game</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <button onclick="saveGame()">Save Game</button>
+                    <button onclick="loadGame()">Load Game</button>
+                    <p class="ancient-border" id="save-load-display">No actions performed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-section">
+            <h2>Achievements / Trophies</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <button onclick="showAchievements()">View Achievements</button>
+                    <p class="ancient-border" id="achievements-display">No achievements to display.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-section">
+            <h2>Multiplayer Features</h2>
+            <div class="section-content">
+                <div class="setting-option">
+                    <button onclick="toggleMultiplayer()">Enable/Disable Multiplayer</button>
+                    <p class="ancient-border" id="multiplayer-display">Multiplayer is currently disabled.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footer">
+       
+    </div>
+    
+
+    <script>
+        function saveGame() {
+            document.getElementById('save-load-display').innerText = 'Game Saved Successfully!';
+        }
+
+        function loadGame() {
+            document.getElementById('save-load-display').innerText = 'Game Loaded Successfully!';
+        }
+
+        function showAchievements() {
+            document.getElementById('achievements-display').innerText = 'Achievements: None available yet.';
+        }
+
+        function toggleMultiplayer() {
+            const multiplayerStatus = document.getElementById('multiplayer-display');
+            multiplayerStatus.innerText = multiplayerStatus.innerText.includes('disabled') 
+                ? 'Multiplayer is currently enabled.' 
+                : 'Multiplayer is currently disabled.';
+        }
+    </script>
+    
+</body>
+</html>
